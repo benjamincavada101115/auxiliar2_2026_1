@@ -25,7 +25,7 @@ class Soldier(val name: String, var hp: Int, val attack: Int) {
     army = newArmy
   }
 
-  private def leaveArmy(): Unit = {
+  def leaveArmy(): Unit = {
     if (army != null){
       army.leave(this)
       army = null
