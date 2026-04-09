@@ -3,7 +3,7 @@ package soldier
 import army.Army
 
 class Soldier(val name: String, var hp: Int, val attack: Int) {
-  var isAlive: Boolean = true
+  private var isAlive: Boolean = true
   var army: Army = null
 
   def attackSoldier(soldier: Soldier): Unit = {
@@ -13,7 +13,7 @@ class Soldier(val name: String, var hp: Int, val attack: Int) {
       soldier.leaveArmy()
     }
   }
-  def die(): Unit = {
+  private def die(): Unit = {
     isAlive = false
   }
 
@@ -25,7 +25,7 @@ class Soldier(val name: String, var hp: Int, val attack: Int) {
     army = newArmy
   }
 
-  def leaveArmy(): Unit = {
+  private def leaveArmy(): Unit = {
     if (army != null){
       army.leave(this)
       army = null

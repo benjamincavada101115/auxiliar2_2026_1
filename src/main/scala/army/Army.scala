@@ -5,7 +5,7 @@ import soldier.Soldier
 import scala.collection.mutable.ArrayBuffer
 
 class Army(val name: String) {
-  val soldiers: ArrayBuffer[Soldier] = new ArrayBuffer[Soldier]
+  private val soldiers: ArrayBuffer[Soldier] = new ArrayBuffer[Soldier]
 
   def join(soldier: Soldier): Unit = {
     soldiers += soldier
